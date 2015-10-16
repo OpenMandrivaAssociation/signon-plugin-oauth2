@@ -26,6 +26,10 @@ Requires:       %{name} = %{EVRD}
 %setup -q -n %{name}.git
 
 %build
+# (tpg) fix clang issue
+export CFLAGS="$CFLAGS -Wno-error=unused-variable"
+export CXXFLAGS="$CXXCLAGS -Wno-error=unused-variable"
+
 export PATH=%{_qt5_bindir}:$PATH
 %qmake_qt5 QMF_INSTALL_ROOT=%{_prefix} \
     CONFIG+=release \
