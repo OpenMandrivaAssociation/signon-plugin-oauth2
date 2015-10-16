@@ -7,7 +7,7 @@ URL:		https://gitlab.com/accounts-sso/signon-plugin-oauth2
 Source0:	https://gitlab.com/accounts-sso/signon-plugin-oauth2/repository/%{name}-%{version}.tar.gz
 BuildRequires:	qt5-devel
 BuildRequires:	cmake(Qt5XmlPatterns)
-BuildRequires:	pkgconfig(signond)
+BuildRequires:	pkgconfig(signon-plugins)
 BuildRequires:	doxygen
 BuildRequires:	graphviz
 BuildRequires:	pkgconfig(libproxy-1.0)
