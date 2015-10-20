@@ -29,7 +29,7 @@ Requires:       %{name} = %{EVRD}
 
 export PATH=%{_qt5_bindir}:$PATH
 %qmake_qt5 QMF_INSTALL_ROOT=%{_prefix} \
-    QMAKE_CXXFLAGS_RELEASE="$QMAKE_CXXFLAGS -Wno-error=unused-variable" \
+    QMAKE_CXXFLAGS_RELEASE="$QMAKE_CXXFLAGS -Wno-error -Wno-error=unused-variable" \
     CONFIG+=release \
     LIBDIR=%{?_libdir} \
     signon-oauth2.pro
