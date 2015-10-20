@@ -34,6 +34,7 @@ export PATH=%{_qt5_bindir}:$PATH
 %qmake_qt5 QMF_INSTALL_ROOT=%{_prefix} \
     CONFIG+=release \
     LIBDIR=%{?_libdir} \
+    QMAKE_CXXFLAGS="$QMAKE_CXXFLAGS -Wno-unused-variable" \
     signon-oauth2.pro
 
 %make
