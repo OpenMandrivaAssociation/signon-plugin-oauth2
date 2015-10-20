@@ -27,7 +27,7 @@ Requires:       %{name} = %{EVRD}
 
 %build
 # (tpg) fix clang issue
-%global optlfags %{optflags} -Wno-unused-variable"
+%global optlfags %{optflags} -Wno-unused-variable
 
 export PATH=%{_qt5_bindir}:$PATH
 %qmake_qt5 QMF_INSTALL_ROOT=%{_prefix} \
