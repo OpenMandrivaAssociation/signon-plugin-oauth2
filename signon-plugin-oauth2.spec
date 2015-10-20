@@ -1,3 +1,5 @@
+%define debug_package %{nil}
+
 Name:		signon-plugin-oauth2
 Version:	0.22
 Release:	1
