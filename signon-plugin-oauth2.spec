@@ -26,15 +26,12 @@ Requires:       %{name} = %{EVRD}
 %setup -q -n %{name}.git
 
 %build
-# (tpg) fix clang issue
-export QMAKE_CFLAGS="$QMAKE_CFLAGS -Wno-unused-variable"
-export QMAKE_CXXFLAGS="$QMAKE_CXXFLAGS -Wno-unused-variable"
 
 export PATH=%{_qt5_bindir}:$PATH
 %qmake_qt5 QMF_INSTALL_ROOT=%{_prefix} \
+    QMAKE_CXXFLAGS_RELEASE="$QMAKE_CXXFLAGS -Wno-unused-variable" \
     CONFIG+=release \
     LIBDIR=%{?_libdir} \
-    QMAKE_CXXFLAGS="$QMAKE_CXXFLAGS -Wno-unused-variable" \
     signon-oauth2.pro
 
 %make
