@@ -5,6 +5,7 @@ Version:	0.22
 Release:	1
 Summary:	OAuth2 plugin for the Accounts framework
 License:	LGPLv2
+Group:		System/Libraries
 URL:		https://gitlab.com/accounts-sso/signon-plugin-oauth2
 Source0:	https://gitlab.com/accounts-sso/signon-plugin-oauth2/repository/%{name}-%{version}.tar.gz
 BuildRequires:	qt5-devel
@@ -22,6 +23,7 @@ Requires:	signon
 %package devel
 Summary:	Development files for %{name}
 Requires:       %{name} = %{EVRD}
+Group:		Development/C++
 
 %description devel
 %{summary}.
