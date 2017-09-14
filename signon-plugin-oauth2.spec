@@ -2,7 +2,7 @@
 
 Name:		signon-plugin-oauth2
 Version:	0.23
-Release:	1
+Release:	2
 Summary:	OAuth2 plugin for the Accounts framework
 License:	LGPLv2
 Group:		System/Libraries
@@ -16,7 +16,7 @@ BuildRequires:	pkgconfig(signon-plugins)
 BuildRequires:	doxygen
 BuildRequires:	graphviz
 BuildRequires:	pkgconfig(libproxy-1.0)
-Requires:	signon
+Requires:	signond
 
 %description
 %{summary}.
