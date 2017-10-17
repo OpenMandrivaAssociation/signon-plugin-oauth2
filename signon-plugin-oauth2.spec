@@ -1,14 +1,14 @@
 %define debug_package %{nil}
 
 Name:		signon-plugin-oauth2
-Version:	0.23
+Version:	0.24
 Release:	1
 Summary:	OAuth2 plugin for the Accounts framework
 License:	LGPLv2
 Group:		System/Libraries
 URL:		https://gitlab.com/accounts-sso/signon-plugin-oauth2
-# (tpg)  wget https://gitlab.com/accounts-sso/signon-plugin-oauth2/repository/archive.tar.gz?ref=VERSION_0.23
-Source0:	https://gitlab.com/accounts-sso/signon-plugin-oauth2/repository/%{name}-%{version}.tar.xz
+# (tpg)  wget https://gitlab.com/accounts-sso/signon-plugin-oauth2/repository/archive.tar.gz?ref=VERSION_%{version}
+Source0:	https://gitlab.com/accounts-sso/signon-plugin-oauth2/repository/%{name}-%{version}.tar.gz
 BuildRequires:	qt5-devel
 BuildRequires:	pkgconfig(Qt5XmlPatterns)
 BuildRequires:	pkgconfig(Qt5Test)
@@ -16,7 +16,7 @@ BuildRequires:	pkgconfig(signon-plugins)
 BuildRequires:	doxygen
 BuildRequires:	graphviz
 BuildRequires:	pkgconfig(libproxy-1.0)
-Requires:	signon
+Requires:	signond
 
 %description
 %{summary}.
@@ -30,7 +30,7 @@ Group:		Development/C++
 %{summary}.
 
 %prep
-%setup -q
+%setup -qn %{name}-VERSION_%{version}-2dd9ba521a0dd4277c4bf6970a7f4e3894fd85ae
 
 %build
 
