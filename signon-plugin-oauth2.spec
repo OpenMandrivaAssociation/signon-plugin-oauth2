@@ -2,7 +2,7 @@
 
 Name:		signon-plugin-oauth2
 Version:	0.24
-Release:	2
+Release:	3
 Summary:	OAuth2 plugin for the Accounts framework
 License:	LGPLv2
 Group:		System/Libraries
