@@ -10,6 +10,7 @@ URL:		https://gitlab.com/accounts-sso/signon-plugin-oauth2
 Source0:	https://gitlab.com/accounts-sso/signon-plugin-oauth2/-/archive/VERSION_%{version}/signon-plugin-oauth2-VERSION_%{version}.tar.bz2
 BuildRequires:	cmake(Qt6Core)
 BuildRequires:	cmake(Qt6Network)
+BuildRequires:	cmake(Qt6Test)
 BuildRequires:	cmake(Qt6Widgets)
 BuildRequires:	pkgconfig(signon-plugins)
 BuildRequires:	doxygen
